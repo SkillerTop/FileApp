@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Download File";
+}
+
+<h2>Форма завантаження файлу</h2>
+
+@using (Html.BeginForm("DownloadFile", "File", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+
+    <div>
+        <label for="firstName">Ім'я:</label>
+        @Html.TextBox("firstName", null, new { required = "required" })
+    </div>
+
+    <div>
+        <label for="lastName">Прізвище:</label>
+        @Html.TextBox("lastName", null, new { required = "required" })
+    </div>
+
+    <div>
+        <label for="fileName">Назва файлу:</label>
+        @Html.TextBox("fileName", null, new { required = "required" })
+    </div>
+
+    <div>
+        <input type="submit" value="Продовжити" />
+    </div>
+}
+
